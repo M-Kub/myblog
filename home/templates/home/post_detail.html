@@ -1,21 +1,25 @@
-{% extends "home/index.html" %} {% block content %} {% if post.published_date %}
-
-    {{ post.published_date }}
+{% extends "home/index.html" %} {% block content %} 
 
 
+{% if post.published_date %}
 
-{% endif %} {% if user.is_authenticated %}
-<a href="{% url 'post_edit' pk=post.pk %}" class="btn btn-default">
-    <i class="fas fa-edit"></i>
-</a>
-{% endif %}
+{{ post.published_date }}
+
+{% endif %} 
 
 
 <h1>{{ post.title }}</h1>
+<br>
+{% if user.is_authenticated %}
+<a href="{% url 'post_edit' pk=post.pk %}"><button>Edit</button></a>
+{% endif %}
 
-<a href={{ post.document.url }}>
+{% if post.document %}
+    <a href={{ post.document.url }}>
     <img src={{ post.document.url }} />
 </a>
+{% endif %}
+
 <p>{{ post.text|linebreaksbr }}</p>
 
 
