@@ -1,5 +1,8 @@
-{% extends "home/index.html" %} {% block content %} 
+{% extends "home/index.html" %} 
 
+{% block title %}{{ post.title }}{% endblock title %}
+
+{% block content %} 
 
 {% if post.published_date %}
 
