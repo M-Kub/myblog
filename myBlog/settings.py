@@ -20,7 +20,7 @@ def get_secret(setting, secrets=secrets):
         raise ImproperlyConfigured("Set the {} setting".format(setting))
 
 
-ALLOWED_HOSTS = ['212.227.206.87', 'mikub.me', 'localhost']
+ALLOWED_HOSTS = ['212.227.206.87', 'mikub.me', 'localhost', '127.0.0.1']
 
 DEBUG = False
 
