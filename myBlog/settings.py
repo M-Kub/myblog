@@ -20,14 +20,21 @@ def get_secret(setting, secrets=secrets):
         raise ImproperlyConfigured("Set the {} setting".format(setting))
 
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['212.227.206.87', 'mikub.me', 'localhost']
 
-DEBUG = True
+DEBUG = False
 
 if DEBUG:
     SECRET_KEY = '00n*n10o*z4!v2%rx9_i303tj%jxp0bxll&v#_&uozarlj)+sr'
 else:
     SECRET_KEY = get_secret('DJANGO_SECRET_KEY')
+
+# ServerSec
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_HSTS_SECONDS = 31536000
+
 
 # Application definition
 INSTALLED_APPS = [
@@ -123,7 +130,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = 'media/'
