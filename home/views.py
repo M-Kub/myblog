@@ -8,7 +8,7 @@ from .forms import PostForm
 def home(request):
     return render(request, 'home/index.html')
 
-def home(request):
+def about(request):
     return render(request, 'home/about.html')
 
 def post_list(request):
