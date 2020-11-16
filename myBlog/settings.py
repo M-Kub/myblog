@@ -20,7 +20,7 @@ def get_secret(setting, secrets=secrets):
         raise ImproperlyConfigured("Set the {} setting".format(setting))
 
 
-ALLOWED_HOSTS = ['212.227.206.87', 'mikub.me', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['212.227.206.87', '2001:8d8:1801:263::', 'mikub.me', 'localhost', '127.0.0.1']
 
 DEBUG = False
 
@@ -31,10 +31,9 @@ else:
 
 # ServerSec
 SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_HSTS_SECONDS = 31536000
-
+#SESSION_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
+#SECURE_HSTS_SECONDS = 31536000
 
 # Application definition
 INSTALLED_APPS = [
