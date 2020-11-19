@@ -22,7 +22,7 @@ def get_secret(setting, secrets=secrets):
 
 ALLOWED_HOSTS = ['212.227.206.87', '2001:8d8:1801:263::', 'mikub.me', 'localhost', '127.0.0.1']
 
-DEBUG = False
+DEBUG = get_secret('DEBUG')
 
 if DEBUG:
     SECRET_KEY = '00n*n10o*z4!v2%rx9_i303tj%jxp0bxll&v#_&uozarlj)+sr'
@@ -30,7 +30,11 @@ else:
     SECRET_KEY = get_secret('DJANGO_SECRET_KEY')
 
 # ServerSec
-SECURE_SSL_REDIRECT = True
+if DEBUG:
+    SECURE_SSL_REDIRECT = False
+else:
+    SECURE_SSL_REDIRECT = True
+
 #SESSION_COOKIE_SECURE = True
 #CSRF_COOKIE_SECURE = True
 #SECURE_HSTS_SECONDS = 31536000

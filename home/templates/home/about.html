@@ -1,27 +1,36 @@
 {% extends "home/index.html" %}
 
+{% load static %}
+
+{% block title %}About Me{% endblock title %}
 
 {% block content %}
-<body style="background-color:#05B9EC;">
-<h1><center>Thats me</center></h1>
+<body>
+
+<h1 style="text-align: center">Hello everybody, today is the {% now "jS F Y" %} and this is a shadow of myself</h1>
+<img src="{% static 'images/schattenIch.jpg' %}"  alt="shadow of myself" class="center" />
 
 
+<p style="text-align: center">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor tellus massa, eu semper lectus tincidunt in. 
+	Fusce bibendum nulla a nisl venenatis molestie. Nam quis eros lacinia, congue neque vitae, tempus nisi. 
+	Nam condimentum convallis porta. Etiam vel neque in justo efficitur placerat. 
+	Morbi ultricies sapien quis eros molestie, et lobortis lectus iaculis. 
+	Curabitur sapien sapien, fringilla vitae pharetra vitae, auctor ut metus. 
+	Ut ut leo sed orci vulputate laoreet quis tempor ante. Phasellus scelerisque posuere lorem vitae interdum. 
+	Praesent eu purus ut libero facilisis placerat sed eu neque. 
+	Morbi mattis, arcu sodales porta dignissim, lacus odio pellentesque orci, sit amet mollis ante felis vel diam. 
+	Mauris ornare odio dui. Pellentesque id justo tortor. Ut sed neque ac libero interdum varius ut vel dolor.
+</p>
 
-<ul>
-	<li>An item</li>
-	<li>Another item</li>
+
+<ul style="text-align: center">
+	<li>Name: MiKUB</li>
+	<li>From: Planet Earth</li>
 </ul>
 
 <p>
-<pre># empty list
-my_list = []
 
-# list of integers
-my_list = [1, 2, 3]
-
-# list with mixed data types
-my_list = [1, "Hello", 3.4]
-</pre>
 </p>
 </body>
 {% endblock %}
