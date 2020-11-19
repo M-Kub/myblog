@@ -23,7 +23,7 @@
 </a>
 {% endif %}
 
-<p>{{ post.text|linebreaksbr }}</p>
+<p>{{ post.text|safe|linebreaksbr }}</p>
 
 
 {% endblock %}
