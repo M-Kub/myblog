@@ -22,7 +22,7 @@ def get_secret(setting, secrets=secrets):
 
 ALLOWED_HOSTS = ['212.227.206.87', '2001:8d8:1801:263::', 'mikub.me', 'localhost', '127.0.0.1']
 
-DEBUG = get_secret('DEBUG')
+DEBUG = False
 
 if DEBUG:
     SECRET_KEY = '00n*n10o*z4!v2%rx9_i303tj%jxp0bxll&v#_&uozarlj)+sr'
@@ -137,3 +137,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
+
+print(DEBUG)

@@ -11,6 +11,9 @@ def home(request):
 def about(request):
     return render(request, 'home/about.html')
 
+def impressum(request):
+    return render(request, 'home/impressum.html')
+
 def post_list(request):
     """REQUESTS POSTS"""
     posts = Post.objects.filter(
