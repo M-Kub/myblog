@@ -46,13 +46,13 @@
  
  mark{color:inherit;background-color:#fe0}
  
- code,pre,samp,tfoot,thead{background-color:rgba(255, 255, 255, 0.05)}
+ code,pre,samp,tfoot,thead{background-color:rgba(0,0,0,.05)}
  
- blockquote,ins,main aside{border:rgba(255, 255, 255, 0.05) solid}
+ blockquote,ins,main aside{border:rgba(179, 168, 168, 0.05) solid}
  
  blockquote,main aside{border-width:0 0 0 .5ch}
  
- code,pre,samp{border:rgba(238, 236, 236, 0.1) solid}
+ code,pre,samp{border:rgba(211, 208, 208, 0.1) solid}
  
  td,th{border:solid #dbdbdb}body>header{text-align:center}
  
