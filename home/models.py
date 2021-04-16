@@ -4,7 +4,7 @@ from django.db import models
 
 class Post(models.Model):
     objects = models.Manager()
-
+    id = models.AutoField(primary_key=True)
     """DjangoAdmin Models"""
     title = models.CharField(max_length=200)
     text = models.TextField()

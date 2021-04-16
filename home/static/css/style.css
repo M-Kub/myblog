@@ -1,4 +1,4 @@
- body {background-color: #fcfcfc}
+ body {background-color: #0f0f0f}
  
  */dd,hr,ol ol,ol ul,ul ol,ul ul{margin:0}
  
@@ -8,7 +8,7 @@
  
  html{font-family:Palatino,Georgia,Lucida Bright,Book Antiqua,serif;font-size:16px;line-height:1.5rem}
  
- code,kbd,pre,samp{font-family:Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:.833rem;color:#111}
+ code,kbd,pre,samp{font-family:Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:.833rem;color:rgb(241, 238, 238)}
  
  kbd{font-weight:700}
  
@@ -38,21 +38,21 @@
  
  table{line-height:calc(1.5rem - 1px);width:100%;border-collapse:collapse}
  
- pre{margin-top:calc(1.5rem - 1px)}body{color:#222;margin:1.5rem 1ch}
+ pre{margin-top:calc(1.5rem - 1px)}body{color:rgb(255, 253, 253);margin:1.5rem 1ch}
  
- a,a code,header nav a:visited{color:#00e}
+ a,a code,header nav a:visited{color:rgb(194, 194, 243)}
  
  a:visited,a:visited code{color:#60b}
  
  mark{color:inherit;background-color:#fe0}
  
- code,pre,samp,tfoot,thead{background-color:rgba(0,0,0,.05)}
+ code,pre,samp,tfoot,thead{background-color:rgba(255, 255, 255, 0.05)}
  
- blockquote,ins,main aside{border:rgba(0,0,0,.05) solid}
+ blockquote,ins,main aside{border:rgba(255, 255, 255, 0.05) solid}
  
  blockquote,main aside{border-width:0 0 0 .5ch}
  
- code,pre,samp{border:rgba(0,0,0,.1) solid}
+ code,pre,samp{border:rgba(238, 236, 236, 0.1) solid}
  
  td,th{border:solid #dbdbdb}body>header{text-align:center}
  

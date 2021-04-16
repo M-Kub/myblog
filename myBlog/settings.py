@@ -7,6 +7,11 @@ from django.core.exceptions import ImproperlyConfigured
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+ALLOWED_HOSTS = ['212.227.206.87', '2001:8d8:1801:263::', 'mikub.me', 'localhost', '127.0.0.1']
+
+#################### My Changes #############################
+
 # Get Postgres-DB Pass
 with open(os.path.join(BASE_DIR, 'myBlog/stuff.json')) as secrets_file:
     secrets = json.load(secrets_file)
@@ -17,12 +22,10 @@ def get_secret(setting, secrets=secrets):
     try:
         return secrets[setting]
     except KeyError:
-        raise ImproperlyConfigured("Set the {} setting".format(setting))
+        raise ImproperlyConfigured(f"Set the {setting} setting")
 
 
-ALLOWED_HOSTS = ['212.227.206.87', '2001:8d8:1801:263::', 'mikub.me', 'localhost', '127.0.0.1']
-
-DEBUG = False
+DEBUG = get_secret('DEBUG')
 
 if DEBUG:
     SECRET_KEY = '00n*n10o*z4!v2%rx9_i303tj%jxp0bxll&v#_&uozarlj)+sr'
@@ -35,9 +38,8 @@ if DEBUG:
 else:
     SECURE_SSL_REDIRECT = True
 
-#SESSION_COOKIE_SECURE = True
-#CSRF_COOKIE_SECURE = True
-#SECURE_HSTS_SECONDS = 31536000
+#################################################
+
 
 # Application definition
 INSTALLED_APPS = [
@@ -137,5 +139,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
-
-print(DEBUG)
