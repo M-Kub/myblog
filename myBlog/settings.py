@@ -8,7 +8,7 @@ from django.core.exceptions import ImproperlyConfigured
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-ALLOWED_HOSTS = ['212.227.206.87', '2001:8d8:1801:263::', 'mikub.me', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['212.227.206.87', '2001:8d8:1801:263::', 'www.mikub.me', 'mikub.me', 'localhost', '127.0.0.1']
 
 #################### My Changes #############################
 
