@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 ALLOWED_HOSTS = ['212.227.206.87', '2001:8d8:1801:263::', 'www.mikub.me', 'mikub.me', 'localhost', '127.0.0.1']
 
-#################### My Changes #############################
+# My Changes #
 
 # Get Postgres-DB Pass
 with open(os.path.join(BASE_DIR, 'myBlog/stuff.json')) as secrets_file:
@@ -39,7 +39,6 @@ else:
     SECURE_SSL_REDIRECT = True
 
 #################################################
-
 
 # Application definition
 INSTALLED_APPS = [

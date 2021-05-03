@@ -97,10 +97,10 @@
  code,samp{border-radius:2px;padding:.1em .2em;white-space:nowrap}
 
  .center {
-    display: block;
+    display: box;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+
   }
 
   .about {

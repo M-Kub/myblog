@@ -16,11 +16,17 @@
 {% if user.is_authenticated %}
 <a href="{% url 'post_edit' pk=post.pk %}"><button>Edit</button></a>
 {% endif %}
-
-{% if post.document %}
-    <a href={{ post.document.url }}>
-    <img src={{ post.document.url }} />
+<br>
+<br>
+{% if post.image %}
+    <a href={{ post.image.url }}>
+    <img src={{ post.image.url }} />
 </a>
+{% endif %}
+<br>
+{% if post.document %}
+<a href="{{ post.document.url }}"> <button>Download here</button></a>
+
 {% endif %}
 
 <p>{{ post.text|safe|linebreaksbr }}</p>
