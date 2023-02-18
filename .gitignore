@@ -2,6 +2,6 @@ __pycache__
 .pyc
 .vscode
 media/
-static/
+/static/
 migrations/
 stuff.json
