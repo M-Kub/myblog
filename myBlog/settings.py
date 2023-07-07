@@ -39,11 +39,12 @@ else:
     SECURE_SSL_REDIRECT = True
 
 #################################################
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Application definition
 INSTALLED_APPS = [
     'home',
     'crispy_forms',
+    'crispy_bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
