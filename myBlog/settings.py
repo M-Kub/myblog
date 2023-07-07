@@ -7,11 +7,6 @@ from django.core.exceptions import ImproperlyConfigured
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-ALLOWED_HOSTS = ['212.227.206.87', '2001:8d8:1801:263::', 'www.mikub.me', 'mikub.me', 'localhost', '127.0.0.1']
-
-# My Changes #
-
 # Get Postgres-DB Pass
 with open(os.path.join(BASE_DIR, 'myBlog/stuff.json')) as secrets_file:
     secrets = json.load(secrets_file)
@@ -26,6 +21,16 @@ def get_secret(setting, secrets=secrets):
 
 
 DEBUG = get_secret('DEBUG')
+
+if DEBUG:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+else:
+    ALLOWED_HOSTS = ['212.227.206.87', '2001:8d8:1801:263::', 'www.mikub.me', 'mikub.me']
+# My Changes #
+
+# Get Postgres-DB Pass
+with open(os.path.join(BASE_DIR, 'myBlog/stuff.json')) as secrets_file:
+    secrets = json.load(secrets_file)
 
 if DEBUG:
     SECRET_KEY = '00n*n10o*z4!v2%rx9_i303tj%jxp0bxll&v#_&uozarlj)+sr'
