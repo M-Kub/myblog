@@ -23,7 +23,7 @@ def get_secret(setting, secrets=secrets):
 DEBUG = get_secret('DEBUG')
 
 if DEBUG:
-    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'mikub.me', 'www.mikub.me']
 else:
     ALLOWED_HOSTS = ['212.227.206.87', '2001:8d8:1801:263::', 'www.mikub.me', 'mikub.me']
 # My Changes #
