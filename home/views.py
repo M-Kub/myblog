@@ -3,7 +3,7 @@ from django.shortcuts import redirect
 from django.utils import timezone
 from .models import Post
 from .forms import PostForm
-
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     return render(request, 'home/index.html')
@@ -30,6 +30,7 @@ def post_detail(request, pk):
     return render(request, 'home/post_detail.html', {'post': post})
 
 
+@login_required
 def post_new(request):
     """WRITE NEW POST"""
     if request.method == "POST":
@@ -45,6 +46,7 @@ def post_new(request):
     return render(request, 'home/post_edit.html', {'form': form})
 
 
+@login_required
 def post_edit(request, pk):
     """EDIT POST"""
     post = get_object_or_404(Post, pk=pk)
