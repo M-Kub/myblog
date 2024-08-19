@@ -5,9 +5,9 @@
 {% block content %} 
 
 {% if post.published_date %}
-
+<h3>
 {{ post.published_date }}
-
+</h3>
 {% endif %} 
 
 
@@ -26,7 +26,6 @@
 <br>
 {% if post.document %}
 <a href="{{ post.document.url }}"> <button>Download here</button></a>
-
 {% endif %}
 
 <p>{{ post.text|safe|linebreaksbr }}</p>

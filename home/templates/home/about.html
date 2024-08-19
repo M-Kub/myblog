@@ -5,25 +5,13 @@
 {% block title %}About Me{% endblock title %}
 
 {% block content %}
-
-<picture>
-
-	<img src="{% static 'images/wald.avif' %}"  alt="shadow of myself" class="center" />
-			
-</picture>
-
-<h2 class="center">Personal Details</h2>
-<ul class="about">
-	<li>	Name  🧑 	Michael Kubesch</li>
-	<li>	From  🌍 	Planet Earth</li>
-	<li>	Email 📧 	mkubesch@mikub.me</li>
-</ul>
-
-<h2 class="center">Overview</h2>
-<p>
-
-</p>
-
+<div>
+	<img class="full-bleed" src="{% static 'images/wald.avif' %}"  alt="wald"/>
+	<h2> Personal Details </h2>
+	<ul >
+		<li>	Name  🧑 	Michael Kubesch</li>
+		<li>	From  🌍 	Planet Earth</li>
+		<li>	Email 📧 	mkubesch@mikub.me</li>
+	</ul>
+</div>
 {% endblock %}
-
-

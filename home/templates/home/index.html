@@ -13,31 +13,29 @@
 
 <body>
     <header>
-        <h1><a href="{% url 'post_list' %}">MIKUB IT</a></h1>
-
+        <h1 class="headline">
+        <img  class="logo" src="{% static 'images/mikub-logo.png' %}"  alt="myLogo"/>
+         <a href="{% url 'post_list' %}">MIKUB IT</a>
+        </h1>  
         <nav>
-            <ul>
-        	<li><a href="{% url 'about' %}">About Me</a></li>
-            <li><a href="{% url 'post_list' %}">Blog</a></li>
-            <li><a href="{% url 'impressum' %}">Impressum</a>
-            </ul>
-            <ul>
+            <ul class="navig">
+        	    <li><a href="{% url 'about' %}">About Me</a></li>
+                <li><a href="{% url 'post_list' %}">Blog</a></li>
+                <li><a href="{% url 'impressum' %}">Impressum</a>
                 <li><a href="https://github.com/M-Kub">GitHub</a></li>
             </ul>
             {% if user.is_authenticated %}
-            <ul>
+            <ul class="navig">
                 <li><a href="{% url 'post_new' %}">NewPost</a></li>
                 <li><a href="{% url 'admin:index' %}">Admin</a></li>
                 <li><a href="{% url 'admin:logout' %}">Logout</a></li>
-
             </ul>
             {% endif %}
         </nav>
       </header>
-      <br>
-      <br>
+
       
-      <main>
+      <main class="wrapper">
         <!-- Begin page content -->
         {% block content %}
 
