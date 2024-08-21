@@ -8,9 +8,10 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-image: url('/static/images/textured_paper.png');
 }
 img, picture, video, canvas, svg {
-  display: block;
+  display: grid;
   max-width: 100%;
 }
 input, button, textarea, select {
