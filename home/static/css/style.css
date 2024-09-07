@@ -9,6 +9,8 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background-image: url('/static/images/textured_paper.png');
+  font-family: Georgia, serif;
+  font-size: 18px;
 }
 img, picture, video, canvas, svg {
   display: grid;
@@ -19,6 +21,8 @@ input, button, textarea, select {
 }
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 code,kbd,pre,samp{
   font-family:Consolas,Liberation Mono,Menlo,Courier,monospace;
@@ -28,15 +32,13 @@ pre {
   border-width:1px;
   border-radius:2px;
   padding:0.5ch;
-  margin-top:calc(1.5rem - 1px)
 }
 pre, code {
   background-color:rgba(180, 176, 176, 0.932);
   border:none;
   padding:0;
-  white-space:inherit;
   border:rgba(211, 208, 208, 0.1) solid;
-  margin-bottom: 50px;
+  white-space: pre-wrap;
 }
 #root, #__next {
   isolation: isolate;
@@ -75,3 +77,16 @@ pre, code {
     vertical-align: middle;
     align-items: center;
   }
+  .postList {
+    line-height: 15px;
+    height: auto;
+  }
+a:link, a:visited { 
+  color: rgb(88, 85, 139); 
+  }
+
+a:hover {
+  color: rgb(66, 45, 139);
+  --shadow-color: rgba(42, 50, 56, 0.671);
+  filter: drop-shadow(1px 2px 8px var(--shadow-color))
+  };
