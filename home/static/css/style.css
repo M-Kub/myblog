@@ -33,12 +33,15 @@ pre {
   border-radius:2px;
   padding:0.5ch;
 }
+pre,table{
+  overflow-x:auto
+}
 pre, code {
   background-color:rgba(180, 176, 176, 0.932);
   border:none;
   padding:0;
   border:rgba(211, 208, 208, 0.1) solid;
-  white-space: pre-wrap;
+  white-space: pre;
 }
 #root, #__next {
   isolation: isolate;
@@ -76,17 +79,16 @@ pre, code {
     justify-content: center;
     vertical-align: middle;
     align-items: center;
-  }
+}
   .postList {
     line-height: 15px;
     height: auto;
-  }
+}
 a:link, a:visited { 
   color: rgb(88, 85, 139); 
-  }
-
+}
 a:hover {
   color: rgb(66, 45, 139);
   --shadow-color: rgba(42, 50, 56, 0.671);
   filter: drop-shadow(1px 2px 8px var(--shadow-color))
-  };
+}
