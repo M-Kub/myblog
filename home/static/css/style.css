@@ -19,27 +19,31 @@ img, picture, video, canvas, svg {
 input, button, textarea, select {
   font: inherit;
 }
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
+p {
   margin-bottom: 25px;
   margin-top: 25px;
 }
-code,kbd,pre,samp{
-  font-family:Consolas,Liberation Mono,Menlo,Courier,monospace;
-  font-size:.933rem;color:rgb(14, 13, 13);
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
 }
 pre {
   border-width:1px;
   border-radius:2px;
-  padding:0.5ch;
+}
+table{
+  line-height:calc(1.5rem - 1px);
+  width:100%;
+  border-collapse:collapse
 }
 pre,table{
   overflow-x:auto
 }
 pre, code {
+  font-family:Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size:.933rem;
+  color:rgb(14, 13, 13);
   background-color:rgba(180, 176, 176, 0.932);
   border:none;
-  padding:0;
   border:rgba(211, 208, 208, 0.1) solid;
   white-space: pre;
 }
@@ -72,17 +76,19 @@ pre, code {
   height: 90px;
   width: 90px;
   align-items: left;
+  padding: 5px;
+  padding-right: 10px;
 }
 .headline {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    vertical-align: middle;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
 }
-  .postList {
-    line-height: 15px;
-    height: auto;
+.postList {
+  line-height:calc(1.2rem - 1px);
+  height: auto;
 }
 a:link, a:visited { 
   color: rgb(88, 85, 139); 
