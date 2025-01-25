@@ -6,12 +6,49 @@
 
 {% block content %}
 <div>
-	<img src="{% static 'images/wald.avif' %}"  alt="wald"/>
-	<h2> Personal Details </h2>
-	<ul >
-		<li>	Name  🧑 	Michael Kubesch</li>
-		<li>	From  🌍 	Planet Earth</li>
-		<li>	Email 📧 	mkubesch@mikub.me</li>
+	<img src="{% static 'images/wald.avif' %}" alt="wald" />
+	<h2>Michael Kubesch</h2>
+	<p>Email: <a href="mailto:mkubesch@mikub.me">mkubesch@mikub.me</a></p>
+	<p>Location: Rimbach/Odw. Germany</p>
+	<h3>Summary</h3>
+	<p>Self taught programmer with a passion for coding and continuous learning.</p>
+	<h3>Skills</h3>
+	<ul>
+		<li>Programming Languages: Python, MicroPython, C, JavaScript</li>
+		<li>Microcontroller Systems: ESP32, Pi Pico</li>
+		<li>Web Technologies: HTML, CSS, Django</li>
+		<li>Operating Systems: Linux (Debian, Ubuntu), Microsoft Windows</li>
+		<li>Server Management: Nginx, Linux Administration</li>
+		<li>Databases: PostgreSQL, SQLite</li>
+		<li>Version Control: Git, GitHub</li>
+		<li>Tools: Vim/Neovim, Visual Studio Code</li>
+	</ul>
+	<h3>Experience</h3>
+	<ul>
+		<li>
+			<strong>Self-Taught Developer</strong>
+			<span>2019 - Present</span>
+			<p>Developed and still maintaining a web application using Django on Debian/Linux, 
+			configured and deployed with Nginx for web server tasks.</p>
+			<p>Worked on various Microcontroller projects using MicroPython and some C, ESP32, and Pi Pico.</p>
+		</li>
+	</ul>
+	<h3>Projects</h3>
+	<ul>
+		<li>
+			<strong>MyBlog</strong>
+			<p>A personal blog and portfolio website to showcase projects and skills, built with Django.</p>
+		</li>
+		<li>
+			<strong>Weatherstation</strong>
+			<p>Created a Weatherstation using an Raspberry Pi Pico. Integrated various sensors 
+			to monitor environmental conditions.</p>
+		</li>
+		<li>
+			<strong>Restoring Vintage ThinkPads</strong>
+			<p>Restored several vintage ThinkPads like a T43 from 2005, T500 and an T420. Upgraded hardware components, 
+				did some neccessary cleaning and renewing thermal paste. </p>
+		</li>
 	</ul>
 </div>
 {% endblock %}
