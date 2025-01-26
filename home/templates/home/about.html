@@ -6,12 +6,11 @@
 
 {% block content %}
 <div>
-	<img src="{% static 'images/thinkpadCollection.jpg' %}" alt="my thinkpad collection" />
 	<h2>Michael Kubesch</h2>
 	<p>Email: <a href="mailto:mkubesch@mikub.me">mkubesch@mikub.me</a></p>
 	<p>Location: Rimbach/Odw. Germany</p>
 	<h3>Summary</h3>
-	<p>Self taught programmer with a passion for coding and continuous learning.</p>
+	<p>Self-taught programmer passionate about coding, embedded systems, vintage hardware, and committed to lifelong learning.</p>
 	<h3>Skills</h3>
 	<ul>
 		<li>Programming Languages: Python, MicroPython, C, JavaScript</li>
@@ -41,8 +40,9 @@
 		</li>
 		<li>
 			<strong>Weatherstation</strong>
-			<p>Created a Weatherstation using an Raspberry Pi Pico. Integrated various sensors 
-			to monitor environmental conditions.</p>
+			<p>Created a Weatherstation using an Raspberry Pi Pico W. Integrated various sensors 
+			to monitor environmental conditions, the sensor data is also available via a Webserver that's running
+			on the Pico W.</p>
 		</li>
 		<li>
 			<strong>Restoring Vintage ThinkPads</strong>
@@ -50,5 +50,6 @@
 				did some neccessary cleaning and renewing thermal paste. </p>
 		</li>
 	</ul>
+	<img src="{% static 'images/thinkpadCollection.jpg' %}" alt="my thinkpad collection" />
 </div>
 {% endblock %}
