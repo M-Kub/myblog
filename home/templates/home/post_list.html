@@ -1,4 +1,4 @@
-{% extends "home/index.html" %} 
+{% extends "home/index.html" %}
 
 {% block content %}
 
@@ -6,11 +6,13 @@
 
 {% for post in posts %}
 
-<h1>
-    <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
-</h1>
-<br>
-
+<ul>
+    <li class="linkList">
+        <h2>
+            <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+        </h2>
+    </li>
+</ul>
 {% endfor %}
 
 {% endblock %}

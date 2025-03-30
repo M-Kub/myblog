@@ -51,7 +51,9 @@ pre, code {
 ul, li {
   line-height:calc(1.5rem - 1px)
 }
-
+ul {
+  margin-bottom: 25px;
+}
 #root, #__next {
   isolation: isolate;
 }
@@ -91,9 +93,8 @@ ul, li {
   vertical-align: middle;
   align-items: center;
 }
-.postList {
-  line-height:calc(1.2rem - 1px);
-  height: auto;
+.linkList {
+  margin: 10px;
 }
 a:link, a:visited { 
   color: rgb(88, 85, 139); 
