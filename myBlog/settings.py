@@ -4,6 +4,9 @@ import json
 from django.core.exceptions import ImproperlyConfigured
 
 
+# Surpress deploymentserver warning.
+os.environ["DJANGO_RUNSERVER_HIDE_WARNING"] = "true"
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
