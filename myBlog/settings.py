@@ -37,6 +37,7 @@ else:
     SECRET_KEY = get_secret('DJANGO_SECRET_KEY')
     ALLOWED_HOSTS = ['212.227.206.87', '2001:8d8:1801:263::', 'www.mikub.me', 'mikub.me']
     SECURE_SSL_REDIRECT = True
+    SECRET_KEY = get_secret('DJANGO_SECRET_KEY')
 
 #################################################
 
