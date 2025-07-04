@@ -6,32 +6,30 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href={% static 'css/style.css' %}>
-    <link rel="shortcut icon" type="image/x-icon" href={% static 'images/mikub-logo.png' %}>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/mikub-logo.png' %}">
     <title>{% block title %}Mikub IT{% endblock title %}</title>
 </head>
 
 <body>
     <header>
-        <div class="header">
-            <img class="logo" src="{% static 'images/mikub-logo.png' %}" alt="myLogo"/>
-            <div class="navbar-right">
-                <nav>
-                    <ul>
-                        <li><a href="{% url 'about' %}">About Me</a></li>
-                        <li><a href="{% url 'post_list' %}">Blog</a></li>
-                        <li><a href="{% url 'impressum' %}">Impressum</a></li>
-                        <li><a href="https://github.com/M-Kub">GitHub</a></li>
-                    </ul>
-                    {% if user.is_authenticated %}
-                    <ul class="navig">
-                        <li><a href="{% url 'post_new' %}">NewPost</a></li>
-                        <li><a href="{% url 'admin:index' %}">Admin</a></li>
-                        <li><a href="{% url 'admin:logout' %}">Logout</a></li>
-                    </ul>
-                    {% endif %}
-                </nav>
-            </div>
+        <a href="{% url 'post_list' %}"><img class="logo" src="{% static 'images/mikub-logo.png' %}" alt="myLogo"/></a>
+        <div class="header-nav">
+            <nav>
+                <ul>
+                    <li><a href="{% url 'about' %}" {% if request.resolver_match.url_name == 'about' %}class="active"{% endif %}>About Me</a></li>
+                    <li><a href="{% url 'post_list' %}" {% if request.resolver_match.url_name == 'post_list' or request.resolver_match.url_name == 'post_detail' %}class="active"{% endif %}>Blog</a></li>
+                    <li><a href="{% url 'impressum' %}" {% if request.resolver_match.url_name == 'impressum' %}class="active"{% endif %}>Impressum</a></li>
+                    <li><a href="https://github.com/M-Kub">GitHub</a></li>
+                </ul>
+                {% if user.is_authenticated %}
+                <ul class="navig">
+                    <li><a href="{% url 'post_new' %}">NewPost</a></li>
+                    <li><a href="{% url 'admin:index' %}">Admin</a></li>
+                    <li><a href="{% url 'admin:logout' %}">Logout</a></li>
+                </ul>
+                {% endif %}
+            </nav>
         </div>
     </header>
 
@@ -39,5 +37,4 @@
         {% block content %}{% endblock %}     
     </main>
 </body>
-
 </html>

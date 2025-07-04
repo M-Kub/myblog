@@ -1,18 +1,16 @@
 {% extends "home/index.html" %}
 
 {% block content %}
-
-{{ post.published_date }}
-
-{% for post in posts %}
-
-<ul>
-    <li class="linkList">
-        <h2>
+<h1>Blog Posts</h1>
+<ul class="modern-blog-list">
+    {% for post in posts %}
+    <li class="modern-blog-card">
+        <h2 class="post-headline">
             <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
         </h2>
     </li>
+    {% empty %}
+    <li class="modern-blog-card">No blog posts yet. Check back soon!</li>
+    {% endfor %}
 </ul>
-{% endfor %}
-
 {% endblock %}
