@@ -13,35 +13,31 @@
 
 <body>
     <header>
-        <h1 class="headline">
-        <img  class="logo" src="{% static 'images/mikub-logo.png' %}"  alt="myLogo"/>
-        <a href="{% url 'post_list' %}">MIKUB IT</a>
-        </h1>  
-        <nav>
-            <ul class="navig">
-        	    <li><a href="{% url 'about' %}">About Me</a></li>
-                <li><a href="{% url 'post_list' %}">Blog</a></li>
-                <li><a href="{% url 'impressum' %}">Impressum</a>
-                <li><a href="https://github.com/M-Kub">GitHub</a></li>
-            </ul>
-            {% if user.is_authenticated %}
-            <ul class="navig">
-                <li><a href="{% url 'post_new' %}">NewPost</a></li>
-                <li><a href="{% url 'admin:index' %}">Admin</a></li>
-                <li><a href="{% url 'admin:logout' %}">Logout</a></li>
-            </ul>
-            {% endif %}
-        </nav>
-      </header>
+        <div class="header">
+            <img class="logo" src="{% static 'images/mikub-logo.png' %}" alt="myLogo"/>
+            <div class="navbar-right">
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'about' %}">About Me</a></li>
+                        <li><a href="{% url 'post_list' %}">Blog</a></li>
+                        <li><a href="{% url 'impressum' %}">Impressum</a></li>
+                        <li><a href="https://github.com/M-Kub">GitHub</a></li>
+                    </ul>
+                    {% if user.is_authenticated %}
+                    <ul class="navig">
+                        <li><a href="{% url 'post_new' %}">NewPost</a></li>
+                        <li><a href="{% url 'admin:index' %}">Admin</a></li>
+                        <li><a href="{% url 'admin:logout' %}">Logout</a></li>
+                    </ul>
+                    {% endif %}
+                </nav>
+            </div>
+        </div>
+    </header>
 
-      
-      <main class="wrapper">
-        <!-- Begin page content -->
-        {% block content %}
-
-        {% endblock %}     
-      </main>
-
+    <main class="wrapper">
+        {% block content %}{% endblock %}     
+    </main>
 </body>
 
 </html>

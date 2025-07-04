@@ -1,4 +1,4 @@
-*/
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -57,6 +57,99 @@ ul {
 #root, #__next {
   isolation: isolate;
 }
+
+/* --- Enhanced Header Styles --- */
+header {
+  margin: 0;
+  min-height: 120px;
+  padding: 0;
+  top: 0;
+  position: sticky;
+  z-index: 10;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  background: linear-gradient(90deg, #5171A5 0%, #243B55 100%);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 32px;
+  background: none;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 140px;
+  height: auto;
+  transition: transform 0.2s;
+}
+.logo:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.navbar-right {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+  align-items: center;
+  background: none;
+  list-style: none;
+}
+
+.navbar-right nav ul,
+.navbar-right nav ul.navig {
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: none;
+}
+
+.navbar-right nav ul li {
+  margin: 0;
+}
+
+.navbar-right nav ul li a {
+  display: block;
+  font-size: 1.08rem;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 20px;
+  color: #f5f8fa;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+
+.navbar-right nav ul li a:hover,
+.navbar-right nav ul li a:focus {
+  background: rgba(255,255,255,0.11);
+  color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(81,113,165, 0.18);
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 12px 8px;
+  }
+  .navbar-right {
+    justify-content: center;
+    gap: 10px;
+  }
+  .logo {
+    margin: 0 auto;
+  }
+}
+
 .wrapper {
   display: grid;
   grid-template-columns:
@@ -67,32 +160,7 @@ ul {
 .wrapper > * {
   grid-column: 2;
 }
-.full-bleed {
-  width: 100%;
-  grid-column: 1 / -1;
-}
-.navig {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  list-style-type: none;
-}
-.logo {
-  height: 90px;
-  width: 90px;
-  align-items: left;
-  padding: 5px;
-  padding-right: 10px;
-}
-.headline {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  vertical-align: middle;
-  align-items: center;
-}
+
 .linkList {
   margin: 10px;
 }
