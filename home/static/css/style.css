@@ -60,6 +60,10 @@ ul, li {
 ul {
   margin-bottom: 25px;
 }
+.about {
+  background-color:rgba(180, 176, 100, 0.832);
+  padding: 32px;
+} 
 #root, #__next {
   isolation: isolate;
 }
